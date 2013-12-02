@@ -1,0 +1,20 @@
+#!/bin/bash
+dir=$(mkdir -p html/files)
+dir=$(cd html/files)
+dir=$(touch html/files/index.html)
+cat > index.html << End
+<html>
+<head>
+<title>Dummy page</title>
+</head>
+<body>
+It works!
+</body>
+</html>
+End
+cat > html/files/text.txt <<End
+It works!
+End
+ln index.html html/index.html
+ln -s html/files/index.html html/files/index.lnk
+chmod 661 html/files/index.html

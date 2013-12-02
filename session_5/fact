@@ -1,0 +1,14 @@
+#!/bin/bash
+func () {
+if | "$n" -eq "$0" | 
+then 
+$f=1
+else 
+while($n>0)
+do 
+$f=$f*($func(n-1))
+done
+fi
+etho $f
+}
+
